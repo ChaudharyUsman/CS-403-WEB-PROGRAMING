@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          background-image: url("data:image/jpeg;base64,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");
+        }
+        .container {
+          max-width: 400px;
+          margin: 50px auto;
+          background-color: #0c38ca;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        h2 {
+          text-align: center;
+        }
+        label {
+          font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+          width: 100%;
+          padding: 10px;
+          margin: 5px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          width: 100%;
+        }
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+        .error {
+          color: red;
+          font-size: 0.9em;
+        }
+      </style>
+      </head>
+      <body>
+      
+      <div class="container">
+        <h2>Signup Form</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <div id="usernameError" class="error"></div>
+      
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <div id="passwordError" class="error"></div>
+      
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+          <div id="birthdateError" class="error"></div>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <div id="emailError" class="error"></div>
+      
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <div id="genderError" class="error"></div>
+      
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+          <div id="phoneNumberError" class="error"></div>
+      
+          <label for="zipcode">Zip Code:</label>
+          <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" required>
+          <div id="zipcodeError" class="error"></div>
+      
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" required>
+          <div id="countryError" class="error"></div>
+      
+          <input type="submit" value="Sign Up">
+        </form>
+      </div>
+      
+      <script>
+        function validateForm() {
+          let isValid = true;
+      
+          // Username Validation
+          let username = document.getElementById("username").value;
+          let usernameError = document.getElementById("usernameError");
+          if (!username) {
+            usernameError.innerHTML = "Username is required";
+            isValid = false;
+          } else {
+            usernameError.innerHTML = "";
+          }
+      
+          // Password Validation
+          let password = document.getElementById("password").value;
+          let passwordError = document.getElementById("passwordError");
+          if (!password) {
+            passwordError.innerHTML = "Password is required";
+            isValid = false;
+          } else {
+            passwordError.innerHTML = "";
+          }
+      
+          // Birthdate Validation
+          let birthdate = document.getElementById("birthdate").value;
+          let birthdateError = document.getElementById("birthdateError");
+          if (!birthdate) {
+            birthdateError.innerHTML = "Birthdate is required";
+            isValid = false;
+          } else {
+            birthdateError.innerHTML = "";
+          }
+      
+          // Email Validation
+          let email = document.getElementById("email").value;
+          let emailError = document.getElementById("emailError");
+          let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email) {
+            emailError.innerHTML = "Email is required";
+            isValid = false;
+          } else if (!emailRegex.test(email)) {
+            emailError.innerHTML = "Invalid email format";
+            isValid = false;
+          } else {
+            emailError.innerHTML = "";
+          }
+      
+          // Gender Validation
+          let gender = document.getElementById("gender").value;
+          let genderError = document.getElementById("genderError");
+          if (!gender) {
+            genderError.innerHTML = "Gender is required";
+            isValid = false;
+          } else {
+            genderError.innerHTML = "";
+          }
+      
+          // Phone Number Validation
+          let phoneNumber = document.getElementById("phoneNumber").value;
+          let phoneNumberError = document.getElementById("phoneNumberError");
+          let phoneRegex = /^[0-9]{10}$/;
+          if (!phoneNumber) {
+            phoneNumberError.innerHTML = "Phone Number is required";
+            isValid = false;
+          } else if (!phoneRegex.test(phoneNumber)) {
+            phoneNumberError.innerHTML = "Invalid phone number format";
+            isValid = false;
+          } else {
+            phoneNumberError.innerHTML = "";
+          }
+      
+          // Zip Code Validation
+          let zipcode = document.getElementById("zipcode").value;
+          let zipcodeError = document.getElementById("zipcodeError");
+          let zipcodeRegex = /^[0-9]{5}$/;
+          if (!zipcode) {
+            zipcodeError.innerHTML = "Zip Code is required";
+            isValid = false;
+          } else if (!zipcodeRegex.test(zipcode)) {
+            zipcodeError.innerHTML = "Invalid zip code format";
+            isValid = false;
+          } else {
+            zipcodeError.innerHTML = "";
+          }
+      
+          // Country Validation
+          let country = document.getElementById("country").value;
+          let countryError = document.getElementById("countryError");
+          if (!country) {
+            countryError.innerHTML = "Country is required";
+            isValid = false;
+          } else {
+            countryError.innerHTML = "";
+          }
+      
+          return isValid;
+        }
+      </script>
+      
+      </body>
+      
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page</title>
+    <style>
+       body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnWxmuUN28dUAxE6-8qE1_b2plED6DhgS8gQ&usqp=CAU");
+}
+
+.container {
+  background-color: #3e09d1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+      </style>
+      </head>
+      <body>
+        <div class="container">
+          <h2>Sign In</h2>
+          <form id="signInForm">
+            <div class="form-control">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
+      
+        <script >
+          document.getElementById("signInForm").addEventListener("submit", function(event){
+                event.preventDefault(); // prevent the default form submission
+                // Perform your sign-in logic here, such as AJAX requests to authenticate user
+                // For demonstration purposes, just logging the username and password
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                console.log("Username:", username);
+                console.log("Password:", password);
+            });
+
+        </script>          
+      </body>      
+</html>
