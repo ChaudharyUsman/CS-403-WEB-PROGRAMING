@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+    <body>
+    
+    <!-- Upload image using input type="file" -->
+    <input type="file" id="uploadImage">
+    
+    <!-- Image container -->
+    <div id="imageContainer">
+        <img id="imge" src="Screenshot 2023-09-14 224904.png" >
+    </div>
+    
+    <!-- Button to toggle image display -->
+    <button id="toggleButton">Hide Image</button>
+    
+    </body>
+    <script>
+        $(document).ready(function() {
+            // Initially hide the image
+            $("#imge").hide();
+            
+            // Toggle image and button text on button click
+            $("#toggleButton").click(function() {
+                $("#imge").toggle();
+                var buttonText = $(this).text();
+                $(this).text(buttonText === "Hide imge" ? "Show imge" : "Hide imge");
+            });
+        });
+        </script>
+</html>
