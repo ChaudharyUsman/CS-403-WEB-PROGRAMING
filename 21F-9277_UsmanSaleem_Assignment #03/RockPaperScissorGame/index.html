@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    .container {
+        text-align: center;
+        
+      }
+      
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: aquamarine;
+      }
+      
+      #result {
+        margin-top: 20px;
+      }
+      
+      #score {
+        margin-top: 20px;
+      }
+      
+</style>
+<body style="background-color: rgb(17, 95, 89);">
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <div id="choices">
+      <button class="choice" data-choice="rock">Rock</button>
+      <button class="choice" data-choice="paper">Paper</button>
+      <button class="choice" data-choice="scissors">Scissors</button>
+    </div>
+    <div id="result">
+      <h2>Result</h2>
+      <p id="winner"></p>
+    </div>
+    <div id="score">
+      <h2>Score</h2>
+      <p id="player-score">Player: 0</p>
+      <p id="computer-score">Computer: 0</p>
+    </div>
+  </div>
+
+  
+  <script>
+    $(document).ready(function() {
+        let playerScore = 0;
+        let computerScore = 0;
+      
+        $(".choice").click(function() {
+          const playerChoice = $(this).data("choice");
+          const computerChoice = getComputerChoice();
+          const winner = getWinner(playerChoice, computerChoice);
+          
+          displayResult(playerChoice, computerChoice, winner);
+          updateScore(winner);
+        });
+      
+        function getComputerChoice() {
+          const choices = ['rock', 'paper', 'scissors'];
+          const randomIndex = Math.floor(Math.random() * choices.length);
+          return choices[randomIndex];
+        }
+      
+        function getWinner(playerChoice, computerChoice) {
+          if (playerChoice === computerChoice) return "draw";
+          if ((playerChoice === "rock" && computerChoice === "scissors") ||
+              (playerChoice === "paper" && computerChoice === "rock") ||
+              (playerChoice === "scissors" && computerChoice === "paper")) {
+            return "player";
+          } else {
+            return "computer";
+          }
+        }
+      
+        function displayResult(playerChoice, computerChoice, winner) {
+          $("#winner").text(`You chose ${playerChoice}. Computer chose ${computerChoice}. ${winner === "draw" ? "It's a draw!" : winner === "player" ? "You win!" : "Computer wins!"}`);
+        }
+      
+        function updateScore(winner) {
+          if (winner === "player") {
+            playerScore++;
+          } else if (winner === "computer") {
+            computerScore++;
+          }
+          $("#player-score").text(`Player: ${playerScore}`);
+          $("#computer-score").text(`Computer: ${computerScore}`);
+        }
+      });
+      
+  </script>
+</body>
+</html>
